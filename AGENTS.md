@@ -1,4 +1,4 @@
-# Agent spec: kids-video-jellyfin
+# Agent spec: no-music-youtube
 
 Goal: given a YouTube URL, make that video playable on a kid's iPad through a
 Jellyfin server on the user's Mac, optionally with the background music removed.

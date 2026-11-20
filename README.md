@@ -1,4 +1,4 @@
-# kids-video-jellyfin
+# no-music-youtube
 
 Put a YouTube video on your kid's iPad through a Jellyfin server on your Mac,
 optionally with the background music removed.
