@@ -32,6 +32,26 @@ Apple-silicon Mac it ran at about 0.4x realtime (54 min video, about 21 min).
 Results are not perfect: sound effects and sung parts can disappear or sound
 muddy. Listen before you delete the original.
 
+## How long does it take?
+Measured on a MacBook Pro 14/16" (M1 Pro, 10 cores, 16 GB RAM, macOS 15), CPU
+mode, 2021-class hardware:
+
+| Video length | Music removal time | Basis |
+|---|---|---|
+| 2 min | 47 s | measured |
+| 54 min | about 21 min | measured |
+| 1 hour | about 25 min | extrapolated at ~0.4x realtime |
+| 2 hours | about 50 min | extrapolated at ~0.4x realtime |
+
+Download is quick on a normal connection (a 554 MB, 54 min video took roughly
+1 to 2 minutes here). Remuxing the finished audio onto the video takes seconds
+because the video is copied, not re-encoded. The one-time Demucs install is a
+few minutes and a large download.
+
+Other machines: expect slower on older Intel Macs or machines with 8 GB RAM,
+and faster on newer Apple-silicon chips. These are guesses; only the M1 Pro
+numbers above were measured. Time a 2-minute clip on yours and scale it.
+
 ## Status
 Developed on one Mac (macOS 15, Apple silicon). The script was run end to end
 with `--no-music` on a 19-second public video: it downloaded, removed the
