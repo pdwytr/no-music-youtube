@@ -6,6 +6,37 @@ optionally with the background music removed.
 - `scripts/kidsvideo.sh` does the work (download, optional music removal, rescan).
 - `AGENTS.md` is the spec for AI agents that run this for you.
 
+## What you need (read this first)
+**This runs on YOUR computer, not in the cloud.** There is no hosted service.
+Nothing here works unless these are true:
+
+1. **A Mac that stays on and awake.** The Mac *is* the server. If it sleeps,
+   shuts down, or loses Wi-Fi, the iPad can't play anything. Turn off sleep
+   (System Settings, Battery or Lock Screen) or keep it plugged in with the
+   lid open. Music removal also needs the Mac awake for its whole run.
+2. **Free disk space on that Mac.** Videos are stored locally. Measured
+   for one 54-minute video:
+   - Final video: about 0.6 GB. 20 videos of that size is roughly
+     12 GB.
+   - Temporary files during music removal: about 2.3 GB at the peak (a 0.55 GB
+     source, a 0.56 GB audio copy, 1.1 GB of separated audio). They are deleted
+     when the script finishes.
+   - Tools: Jellyfin app about 0.35 GB, Demucs and its Python packages about
+     0.85 GB, plus the Demucs model that downloads on first use (size not
+     measured here).
+   - Rule of thumb: keep **10 GB free** to start, more for a bigger library.
+3. **Home Wi-Fi.** The iPad and the Mac must be on the same network. A VPN on
+   the Mac can block the iPad from reaching it; turn the VPN off.
+4. **Internet** for the download and the one-time installs. After that,
+   playing videos at home needs no internet.
+5. **Homebrew** (https://brew.sh) to install the tools below.
+6. **Patience for music removal.** See the timing table further down. Your
+   Mac does the work, so it will be busy and warm.
+
+What this does **not** do: it does not work when you are away from home (that
+needs extra setup not covered here), and nothing is backed up. If the Mac's
+disk dies, the videos are gone.
+
 ## Setup (once, ~15 min)
 ```sh
 brew install --cask jellyfin

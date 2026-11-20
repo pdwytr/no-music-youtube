@@ -6,6 +6,12 @@ Jellyfin server on the user's Mac, optionally with the background music removed.
 This file is written for AI coding agents (Claude Code, Hermes, Codex, etc.).
 Humans: see README.md.
 
+## Tell the user up front
+This runs on their own Mac, not the cloud: the Mac must stay on and awake, have
+roughly 10 GB free disk (about 2.3 GB temporary per hour of video during music
+removal, about 0.6 GB per finished hour), be on the same Wi-Fi as the iPad, and
+the VPN must be off. Details and measurements are in README.md.
+
 ## Inputs
 | Input | Required | Notes |
 |---|---|---|
